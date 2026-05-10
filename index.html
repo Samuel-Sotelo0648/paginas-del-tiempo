@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- CSS del proyecto -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/img/favicon/typewriter-1" type="image/x-icon">
+    <title>Páginas del Tiempo | Libros que cuentan historias</title>
+</head>
+
+<body>
+    <header>
+        <!-- Parte Superior -->
+        <div class="header-top">
+            <div class="logo páginas del Tiempo">
+                <a href="./index.html">
+                    <img src="" alt="Logo pag">
+                </a>
+            </div>
+
+            <div class="search">
+                <input type="text" id="search" placeholder="🔍 Buscar libro, autor o ISBN">
+                <label for="search">Buscar</label>
+            </div>
+
+            <div class="actions">
+                <a href="">
+                    <img src="./assets/img/icons/favorite_64.svg" alt="Ver favoritos">
+                </a>
+
+                <a href="">
+                    <img src="./assets/img/icons/shopping_cart_64.svg" alt="Ver carrito">
+                </a>
+
+                <div class="user-dropdown">
+                    <button aria-label="Abrir menú de usuario" aria-expanded="false" aria-controls="user-menu">
+                        <img src="./assets/img/icons/account_circle_64.svg" alt="Cuenta Usuario">
+                    </button>
+
+                    <ul id="user-menu" class="dropdown-menu">
+                        <li><a href="">Iniciar sesión</a></li>
+                        <li><a href="">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegacion -->
+        <nav class="header-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pages/book-categories.html">Libros</a></li>
+                <li><a href="./pages/about-us.html">Sobre Nosotros</a></li>
+                <li><a href="./pages/contact.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Libros Vintage para mentes curiosas.</h2>
+                <p>Descubre historias que resisten al tiempo.</p>
+                <div class="hero-buttons">
+                    <a href="" class="btn-primary">Explorar colección</a>
+                    <a href="" class="btn-secondary">Explorar libros</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="" alt="Máquina de escribir">
+            </div>
+        </section>
+
+        <section class="hero-features">
+            <article class="service-feature">
+                <img src="./assets/img/hero-features/book_80.svg" alt="Libros seleccionados">
+                <h3>Libros Seleccionados</h3>
+                <p>Cada libro es elegido cuidadosamente.</p>
+            </article>
+
+            <div class="separator"></div>
+
+            <article class="service-feature">
+                <img src="./assets/img/hero-features/shoppingmode_80.svg" alt="Ediciones únicas">
+                <h3>Ediciones únicas</h3>
+                <p>Tesoros difíciles de encontrar.</p>
+            </article>
+
+            <div class="separator"></div>
+
+            <article class="service-feature">
+                <img src="./assets/img/hero-features/local_shipping_80.svg" alt="Envíos a todo el país">
+                <h3>Envíos a todo el país</h3>
+                <p>Empaques seguros y con amor.</p>
+            </article>
+
+            <div class="separator"></div>
+
+            <article class="service-feature">
+                <img src="./assets/img/hero-features/favorite_80.svg" alt="Amantes de los libros">
+                <h3>Amantes de los libros</h3>
+                <p>Aquí compartimos tu misma pasión.</p>
+            </article>
+        </section>
+
+        <section class="book-explorer">
+            <!-- Categorías -->
+            <aside class="categories">
+                <h2>Explora por categorías</h2>
+
+                <ul>
+                    <li><a href="">Novelas clásicas</a></li>
+                    <li><a href="">Poesía</a></li>
+                    <li><a href="">Historia</a></li>
+                    <li><a href="">Filosofía</a></li>
+                    <li><a href="">Ensayos</a></li>
+                    <li><a href="">Infantil</a></li>
+                    <li><a href="">Arte y fotografía</a></li>
+                    <li><a href="">Ciencia</a></li>
+                </ul>
+
+                <a href="" class="categories-view-all">Ver todas las categorías →</a>
+            </aside>
+
+            <!-- Libros Destacados -->
+            <section class="book-section" data-type="featured">
+
+                <div class="section-header">
+                    <h2>Libros Destacados</h2>
+                    <a href="" class="view-all">Ver todos →</a>
+                </div>
+
+                <div class="books-grid"></div>
+
+            </section>
+        </section>
+
+        <!-- Más Vendidos -->
+        <section class="book-list" data-type="best-sellers">
+
+            <div class="section-header">
+                <h2>Más vendidos</h2>
+                <a href="" class="view-all">Ver todos →</a>
+            </div>
+
+            <div class="books-grid"></div>
+
+        </section>
+
+        <!-- Descuentos -->
+        <section class="book-list" data-type="discounts">
+
+            <div class="section-header">
+                <h2>Descuentos</h2>
+                <a href="" class="view-all">Ver todos →</a>
+            </div>
+
+            <div class="books-grid"></div>
+
+        </section>
+
+        <!-- Mejor Calificados -->
+        <section class="book-list" data-type="top-rated">
+
+            <div class="section-header">
+                <h2>Mejor calificados</h2>
+                <a href="" class="view-all">Ver todos →</a>
+            </div>
+
+            <div class="books-grid"></div>
+
+        </section>
+
+        <!-- Nuevos Libros -->
+        <section class="book-list" data-type="new-releases">
+
+            <div class="section-header">
+                <h2>Nuevos libros</h2>
+                <a href="" class="view-all">Ver todos →</a>
+            </div>
+
+            <div class="books-grid"></div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <!-- Marca -->
+        <div class="footer-brand">
+            <h3>PÁGINAS DEL TIEMPO</h3>
+            <p>Libros que cuentan historias</p>
+        </div>
+
+        <!-- Contenido -->
+        <div class="footer-content">
+
+            <div class="footer-links">
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Libros</a></li>
+                    <li><a href="">Sobre Nosotros</a></li>
+                    <li><a href="">Categorías</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-help">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                    <li><a href="">Envíos</a></li>
+                    <li><a href="">Devoluciones</a></li>
+                    <li><a href="">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social-pay">
+
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="" target="_blank">
+                        <img src="" alt="Instagram">
+                    </a>
+                    <a href="" target="_blank">
+                        <img src="" alt="Facebook">
+                    </a>
+                    <a href="" target="_blank">
+                        <img src="" alt="Gmail">
+                    </a>
+                </div>
+
+                <h4>Métodos de pago</h4>
+                <div class="payment-icons">
+                    <img src="" alt="Visa">
+                    <img src="" alt="Mastercard">
+                    <img src="" alt="PayPal">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PÁGINAS DEL TIEMPO - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
