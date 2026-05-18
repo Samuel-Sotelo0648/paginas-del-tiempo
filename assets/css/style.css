@@ -1,3 +1,5 @@
+@import url(./reset.css);
+@import url(./variables.css);
 /* 
 ======================================================
 ESTILOS GENERALES
@@ -85,9 +87,28 @@ NAV: HEADER-NAV
 ====
 */
 
+.header-nav {
+    background-color: rgba(139, 107, 74, 0.4);
+    padding: 20px 0;
+    border-bottom: 2px solid var(--text-strong);
+}
+
 .header-nav ul {
     display: flex;
     justify-content: space-evenly;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: var(--brown-dark); /* Marrón oscuro para contraste */
+    font-weight: 500;
+    padding: 20px 80px;
+}
+
+.header-nav ul li a:hover {
+    background-color: rgba(139, 107, 74, 0.2); /* Hover más suave */
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 /* 
