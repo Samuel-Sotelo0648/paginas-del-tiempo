@@ -1,5 +1,6 @@
 @import url(./reset.css);
 @import url(./variables.css);
+
 /* 
 ======================================================
 ESTILOS GENERALES
@@ -35,6 +36,23 @@ DIV: HEADER-TOP
     background-color: var(--text-strong);
 }
 
+.logo a {
+    display: flex;
+    color: #e0c8aa;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    margin: 0 auto;
+}
+
+
+.logo-content h1, .logo-content p{
+    font-size: 1.1rem;
+    margin-left: 15px;
+}
+
 .search {
     display: flex;
     align-items: center;
@@ -57,7 +75,7 @@ DIV: HEADER-TOP
 .search label {
     padding: 12px 20px;
     background-color: #d4bfa3;
-    color: #fff; 
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
     text-align: center;
@@ -66,7 +84,7 @@ DIV: HEADER-TOP
 }
 
 .search label:hover {
-    background-color: #cbb89a; 
+    background-color: #cbb89a;
 }
 
 .actions {
@@ -100,13 +118,15 @@ NAV: HEADER-NAV
 
 .header-nav ul li a {
     text-decoration: none;
-    color: var(--brown-dark); /* Marrón oscuro para contraste */
+    color: var(--brown-dark);
+    /* Marrón oscuro para contraste */
     font-weight: 500;
     padding: 20px 80px;
 }
 
 .header-nav ul li a:hover {
-    background-color: rgba(139, 107, 74, 0.2); /* Hover más suave */
+    background-color: rgba(139, 107, 74, 0.2);
+    /* Hover más suave */
     border-radius: 5px;
     font-weight: bold;
 }
@@ -176,7 +196,6 @@ CONTENIDO
 .footer-links a,
 .footer-help a {
     color: #e0c8aa;
-    text-decoration: none;
     font-size: 1.2rem;
 }
 
@@ -184,6 +203,22 @@ CONTENIDO
 .footer-help a:hover {
     color: #f5ebdd;
     /* hover beige claro */
+}
+
+.social-icons, .payment-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 50px;
+    padding: 0 5px;
+}
+
+.payment-icons img {
+    width: 60px;
+    padding: 0 5px;
 }
 
 /* 
@@ -224,9 +259,10 @@ SECTION: HERO
 */
 
 .hero {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: 60px;
+    padding: 60px 0;
 }
 
 .hero-content {
@@ -237,7 +273,7 @@ SECTION: HERO
     border-bottom-left-radius: 30px;
     box-shadow: 0 0 25px 2px;
     /* Margin temporal (Mientras se agrega la imagen) */
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .hero-buttons {
@@ -337,9 +373,13 @@ ASIDE: CATEGORÍAS
 .categories {
     width: 25%;
     /* ocupa 25% del contenedor */
-    background-color: var(--bg-soft);
+    background-color: #CBB89A;
+    background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
     padding: 2rem;
-    border-radius: 8px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 0 0 15px 2px;
 }
 
 .categories h2 {
@@ -357,11 +397,12 @@ ASIDE: CATEGORÍAS
 
 .categories a {
     color: var(--text-main);
-    text-decoration: none;
 }
 
 .categories a:hover {
     color: var(--link-hover);
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .categories-view-all {
@@ -385,10 +426,10 @@ SECCIÓN: LIBROS DESTACADOS
 .book-section {
     width: 70%;
     /* ocupa el resto del espacio */
-    background-color: #e0f7fa;
-    /* color temporal para ver bloques */
+    background-color: rgba(220, 200, 170, 0.4);
     padding: 1rem;
     border-radius: 8px;
+    border: 2px dashed black;
 }
 
 /* Encabezado de sección */
@@ -411,6 +452,7 @@ SECCIÓN: LIBROS DESTACADOS
 
 .section-header .view-all:hover {
     color: var(--link-hover);
+    text-decoration: underline;
 }
 
 /* 
@@ -468,8 +510,8 @@ SECTIONS: BOOK LIST
     /* ocupa casi todo el contenedor */
     margin: 0 auto 3rem auto;
     /* centrado horizontal y espacio inferior */
-    background-color: #e0f7fa;
-    /* color temporal */
+    background-color: rgba(220, 200, 170, 0.4);
+    border: 2px dashed black;
     padding: 1rem;
     border-radius: 8px;
 }
@@ -479,4 +521,92 @@ SECTIONS: BOOK LIST
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
+}
+
+
+
+
+/* 
+======================================================
+SECTIONS: RECEIVE STORIES
+======================================================
+*/
+
+.receive-stories {
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.receive-stories-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+
+    background: repeating-linear-gradient(-45deg,
+            #DCC8AA 0px, #DCC8AA 18px,
+            #b91c1c 18px, #b91c1c 30px,
+            #DCC8AA 30px, #DCC8AA 48px,
+            #1e3a8a 48px, #1e3a8a 60px);
+
+    border-radius: 12px;
+    box-shadow: 0 0 30px 12px rgba(0, 0, 0, 0.25);
+}
+
+.receive-stories-content-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #CBB89A;
+    background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.receive-stories-content {
+    width: 45%;
+    padding: 0 15px 0 20px;
+}
+
+.receive-stories-content h3{
+    padding-bottom: 8px;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.receive-stories-form {
+    width: 40%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.receive-stories-form input {
+    width: 60%;
+    padding: 12px 30px;
+    background-color: #CBB89A;
+    background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
+    border: 1px solid var(--text-strong);
+    outline: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.receive-stories-form button {
+    padding: 12px 20px;
+    background-color: var(--text-strong);
+    border: 1px solid var(--text-strong);
+    color: #f5ebdd;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.receive-stories-image {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.receive-stories-image img {
+    width: 110px;
 }
