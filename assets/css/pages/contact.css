@@ -1,0 +1,18 @@
+.contact-container {
+    width: 90%;
+    margin: 40px auto 60px auto;
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.methods-grid {
+    display: flex;
+    text-align: center;
+}
+
+.method-card {
+    width: 25%;
+}
