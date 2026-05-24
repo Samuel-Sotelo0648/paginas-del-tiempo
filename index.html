@@ -11,8 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
     <!-- CSS del proyecto -->
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/variables.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Favicon -->
@@ -24,9 +22,13 @@
     <header>
         <!-- Parte Superior -->
         <div class="header-top">
-            <div class="logo páginas del Tiempo">
+            <div class="logo">
                 <a href="./index.html">
-                    <img src="" alt="Logo pag">
+                    <img src="./assets/img/logo/typewriter-logo.svg" alt="Logo pag">
+                    <div class="logo-content">
+                        <h1>PÁGINAS DEL TIEMPO</h1>
+                        <p>LIBROS QUE CUENTAN HISTORIAS</p>
+                    </div>
                 </a>
             </div>
 
@@ -37,11 +39,11 @@
 
             <div class="actions">
                 <a href="">
-                    <img src="./assets/img/icons/favorite_64.svg" alt="Ver favoritos">
+                    <img src="./assets/img/icons/actions/favorite_64.svg" alt="Ver favoritos">
                 </a>
 
                 <a href="">
-                    <img src="./assets/img/icons/shopping_cart_64.svg" alt="Ver carrito">
+                    <img src="./assets/img/icons/actions/shopping_cart_64.svg" alt="Ver carrito">
                 </a>
 
                 <div class="user-dropdown">
@@ -117,7 +119,7 @@
 
         <section class="book-explorer">
             <!-- Categorías -->
-            <aside class="categories">
+            <aside class="categories" id="categories">
                 <h2>Explora por categorías</h2>
 
                 <ul>
@@ -195,6 +197,33 @@
 
         </section>
 
+        <section class="receive-stories">
+            <div class="receive-stories-container">
+
+                <div class="receive-stories-content-wrapper">
+
+                    <div class="receive-stories-content">
+                        <h3>Recibe historias en tu correo</h3>
+                        <p>
+                            Suscríbete y descubre libros únicos, promociones especiales
+                            y nuevas historias cada semana.
+                        </p>
+                    </div>
+
+                    <div class="receive-stories-form">
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button type="submit">Suscribirse</button>
+                    </div>
+
+                    <div class="receive-stories-image">
+                        <img src="./assets/img/icons/stamps/stamp_2.png" alt="Estampilla">
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -210,20 +239,20 @@
             <div class="footer-links">
                 <h4>Explorar</h4>
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Libros</a></li>
-                    <li><a href="">Sobre Nosotros</a></li>
-                    <li><a href="">Categorías</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./pages/book-categories.html">Libros</a></li>
+                    <li><a href="./pages/about-us.html">Sobre Nosotros</a></li>
+                    <li><a href="#categories">Categorías</a></li>
                 </ul>
             </div>
 
             <div class="footer-help">
                 <h4>Ayuda</h4>
                 <ul>
-                    <li><a href="">Preguntas frecuentes</a></li>
-                    <li><a href="">Envíos</a></li>
-                    <li><a href="">Devoluciones</a></li>
-                    <li><a href="">Contáctanos</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Contáctanos</a></li>
                 </ul>
             </div>
 
@@ -231,22 +260,23 @@
 
                 <h4>Síguenos</h4>
                 <div class="social-icons">
-                    <a href="" target="_blank">
-                        <img src="" alt="Instagram">
+                    <a href="#" target="_blank">
+                        <img src="./assets/img/icons/social/instagram.svg" alt="Instagram" title="Instagram">
                     </a>
-                    <a href="" target="_blank">
-                        <img src="" alt="Facebook">
+                    <a href="#" target="_blank">
+                        <img src="./assets/img/icons/social/facebook.svg" alt="Facebook" title="Facebook">
                     </a>
-                    <a href="" target="_blank">
-                        <img src="" alt="Gmail">
+                    <a href="#" target="_blank">
+                        <img src="./assets/img/icons/social/gmail.svg" alt="Gmail" title="Gmail">
                     </a>
                 </div>
 
                 <h4>Métodos de pago</h4>
                 <div class="payment-icons">
-                    <img src="" alt="Visa">
-                    <img src="" alt="Mastercard">
-                    <img src="" alt="PayPal">
+                    <img src="./assets/img/icons/payment/visa.svg" alt="Visa" title="Visa">
+                    <img src="./assets/img/icons/payment/mastercard.svg" alt="Mastercard" title="Mastercard">
+                    <img src="./assets/img/icons/payment/american-express.svg" alt="American Express"
+                        title="American Express">
                 </div>
 
             </div>

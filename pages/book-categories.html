@@ -4,15 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- CSS del proyecto -->
+    <link rel="stylesheet" href="./../assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../assets/img/favicon/typewriter-1" type="image/x-icon">
     <title>Categorías de libros</title>
 </head>
 
 <body>
+    <header>
+        <!-- Parte Superior -->
+        <div class="header-top">
+            <div class="logo">
+                <a href="./../index.html">
+                    <img src="./../assets/img/logo/typewriter-logo.svg" alt="Logo pag">
+                    <div class="logo-content">
+                        <h1>PÁGINAS DEL TIEMPO</h1>
+                        <p>LIBROS QUE CUENTAN HISTORIAS</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="search">
+                <input type="text" id="search" placeholder="🔍 Buscar libro, autor o ISBN">
+                <label for="search">Buscar</label>
+            </div>
+
+            <div class="actions">
+                <a href="">
+                    <img src="./../assets/img/icons/actions/favorite_64.svg" alt="Ver favoritos">
+                </a>
+
+                <a href="">
+                    <img src="./../assets/img/icons/actions/shopping_cart_64.svg" alt="Ver carrito">
+                </a>
+
+                <div class="user-dropdown">
+                    <button aria-label="Abrir menú de usuario" aria-expanded="false" aria-controls="user-menu">
+                        <img src="./../assets/img/icons/account_circle_64.svg" alt="Cuenta Usuario">
+                    </button>
+
+                    <ul id="user-menu" class="dropdown-menu">
+                        <li><a href="">Iniciar sesión</a></li>
+                        <li><a href="">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegacion -->
+        <nav class="header-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="./../index.html">Inicio</a></li>
+                <li><a href="./book-categories.html">Libros</a></li>
+                <li><a href="./about-us.html">Sobre Nosotros</a></li>
+                <li><a href="./contact.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
         <div class="categories-container">
             <h1>Explorar libros por categoría</h1>
             <!-- Sección: Novelas clásicas -->
-            <section class="book-section" data-type="classic-novels">
+            <section class="book-list" data-type="classic-novels">
 
                 <div class="section-header">
                     <h2>Novelas clásicas</h2>
@@ -24,7 +86,7 @@
             </section>
 
             <!-- Sección: Poesía -->
-            <section class="book-section" data-type="poetry">
+            <section class="book-list" data-type="poetry">
 
                 <div class="section-header">
                     <h2>Poesía</h2>
@@ -36,7 +98,7 @@
             </section>
 
             <!-- Sección: Historia -->
-            <section class="book-section" data-type="history">
+            <section class="book-list" data-type="history">
 
                 <div class="section-header">
                     <h2>Historia</h2>
@@ -48,7 +110,7 @@
             </section>
 
             <!-- Sección: Filosofía -->
-            <section class="book-section" data-type="philosophy">
+            <section class="book-list" data-type="philosophy">
 
                 <div class="section-header">
                     <h2>Filosofía</h2>
@@ -60,7 +122,7 @@
             </section>
 
             <!-- Sección: Ensayos -->
-            <section class="book-section" data-type="essays">
+            <section class="book-list" data-type="essays">
 
                 <div class="section-header">
                     <h2>Ensayos</h2>
@@ -72,7 +134,7 @@
             </section>
 
             <!-- Sección: Infantil -->
-            <section class="book-section" data-type="children">
+            <section class="book-list" data-type="children">
 
                 <div class="section-header">
                     <h2>Infantil</h2>
@@ -84,7 +146,7 @@
             </section>
 
             <!-- Sección: Arte y fotografía -->
-            <section class="book-section" data-type="art-photography">
+            <section class="book-list" data-type="art-photography">
 
                 <div class="section-header">
                     <h2>Arte y fotografía</h2>
@@ -96,7 +158,7 @@
             </section>
 
             <!-- Sección: Ciencia -->
-            <section class="book-section" data-type="science">
+            <section class="book-list" data-type="science">
 
                 <div class="section-header">
                     <h2>Ciencia</h2>
@@ -108,6 +170,68 @@
             </section>
         </div>
     </main>
+
+    <footer class="footer">
+        <!-- Marca -->
+        <div class="footer-brand">
+            <h3>PÁGINAS DEL TIEMPO</h3>
+            <p>Libros que cuentan historias</p>
+        </div>
+
+        <!-- Contenido -->
+        <div class="footer-content">
+
+            <div class="footer-links">
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href="./../index.html">Inicio</a></li>
+                    <li><a href="./book-categories.html">Libros</a></li>
+                    <li><a href="./about-us.html">Sobre Nosotros</a></li>
+                    <li><a href="./../index.html#categories">Categorías</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-help">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social-pay">
+
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank">
+                        <img src="./../assets/img/icons/social/instagram.svg" alt="Instagram" title="Instagram">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./../assets/img/icons/social/facebook.svg" alt="Facebook" title="Facebook">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./../assets/img/icons/social/gmail.svg" alt="Gmail" title="Gmail">
+                    </a>
+                </div>
+
+                <h4>Métodos de pago</h4>
+                <div class="payment-icons">
+                    <img src="./../assets/img/icons/payment/visa.svg" alt="Visa" title="Visa">
+                    <img src="./../assets/img/icons/payment/mastercard.svg" alt="Mastercard" title="Mastercard">
+                    <img src="./../assets/img/icons/payment/american-express.svg" alt="American Express"
+                        title="American Express">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PÁGINAS DEL TIEMPO - Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
