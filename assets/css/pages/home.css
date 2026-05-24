@@ -14,6 +14,7 @@ SECTION: HERO
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 3.75rem 0;
 }
 
@@ -23,7 +24,10 @@ SECTION: HERO
     padding: 3.75rem 2.5rem;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 30px;
-    box-shadow: 0 0 25px 2px;
+    box-shadow: 0 0 30px 12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-buttons {
@@ -39,6 +43,7 @@ SECTION: HERO
     border: none;
     padding: 1rem 1.5625rem;
     margin-right: 0.625rem;
+    border: 2px solid var(--btn-bg);
     border-radius: 10px;
 
 }
@@ -46,6 +51,7 @@ SECTION: HERO
 .btn-primary:hover {
     background-color: var(--btn-hover);
     font-weight: bold;
+    border: 2px solid var(--btn-hover);
 }
 
 
@@ -70,7 +76,14 @@ SECTION: HERO
 
 .hero-image {
     display: flex;
-    align-items: center;
+    gap: 3.75rem;
+}
+
+.hero-image img {
+    width: 13.75rem;
+    box-shadow: 0 0 30px 12px rgba(0, 0, 0, 0.18);
+    background-color: rgba(0, 0, 0, 0.13);
+    border-radius: 40px;
 }
 
 /* 
@@ -126,7 +139,7 @@ ASIDE: CATEGORÍAS
     border-top-right-radius: 20px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 40px;
-    box-shadow: 0 0 15px 2px;
+    box-shadow: 0 0 30px 12px rgba(0, 0, 0, 0.25);
 }
 
 .categories h2 {

@@ -20,6 +20,7 @@ HEADER LAYOUT
     display: flex;
     align-items: center;
     color: var(--color-surface-medium);
+    gap: 0.625rem;
 }
 
 /* ICONO LOGO */
@@ -30,13 +31,8 @@ HEADER LAYOUT
 
 /* TEXTO LOGO */
 
-.logo-content {
-    margin-left: 1rem;
-}
-
-.logo-content h1, 
-.logo-content p 
-{
+.logo-content h1,
+.logo-content p {
     font-size: 1.1rem;
 }
 
@@ -45,10 +41,43 @@ HEADER LAYOUT
 .actions {
     display: flex;
     align-items: center;
+    gap: 1.25rem;
 }
 
-/* DROPDOWN */
+.icon-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-.dropdown-menu {
-    display: none;
+.icon-actions a img {
+    width: 2.8125rem;
+}
+
+.auth-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.login-btn {
+    background-color: var(--color-surface-medium);
+    color: var(--text-strong);
+    padding: 0.75rem;
+    border: 2px solid var(--color-surface-medium);
+    border-radius: 6px;
+}
+
+.register-btn {
+    border: 2px solid var(--color-surface-dark);
+    border-radius: 6px;
+    padding: 0.75rem;
+    color: var(--color-surface-dark);
+}
+
+.register-btn:hover,
+.login-btn:hover  {
+    background-color: var(--bg-soft);
+    color: var(--text-strong);
+    font-weight: bold;
+    border: 2px solid var(--bg-soft);
 }
