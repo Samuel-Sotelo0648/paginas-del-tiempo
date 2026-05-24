@@ -17,7 +17,7 @@
     border-bottom-left-radius: 8px;
 }
 
-.search label {
+.search button {
     padding: 0.75rem 1.25rem;
     background-color: var(--color-surface-dark);
     color: var(--color-white);
@@ -28,6 +28,6 @@
     border-bottom-right-radius: 8px;
 }
 
-.search label:hover {
+.search button:hover {
     background-color: var(--bg-soft);
 }
