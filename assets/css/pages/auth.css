@@ -4,7 +4,8 @@ REGISTER PAGE STYLES
 ===============================================================================================
 */
 
-.register-page-wrapper {
+.register-page-wrapper,
+.login-page-wrapper {
     width: 75%;
     border: 2px dashed black;
     border-radius: 25px;
@@ -12,14 +13,20 @@ REGISTER PAGE STYLES
     margin: 5rem auto 5rem auto;
 }
 
-.register-form-container h2 {
+.register-form-container h2,
+.login-form-container h2 {
     text-align: center;
     font-size: 1.7rem;
 }
 
-.register-form-container p {
+.register-form-container p,
+.login-form-container p {
     text-align: center;
     margin-top: 1.5rem;
+}
+
+#loginForm {
+    margin-top: 0.5rem;
 }
 
 .form-footer-actions {
@@ -28,17 +35,27 @@ REGISTER PAGE STYLES
 }
 
 .form-redirect,
-.form-legal {
+.form-legal,
+.form-footer-actions {
     margin: 0.625rem 0;
 }
 
-.register-form-container a {
+.register-form-container a,
+.form-footer-actions a {
     font-weight: bold;
 }
 
-.register-form-container a:hover {
+.register-form-container a:hover,
+.form-footer-actions a:hover {
     text-decoration: underline;
     color: var(--link-hover);
+}
+
+.footer-border-bottom {
+    width: 82%;
+    padding-bottom: 1.5625rem;
+    margin: 0 auto 2.5rem auto;
+    border-bottom: 3px dotted black;
 }
 
 .register-final span {

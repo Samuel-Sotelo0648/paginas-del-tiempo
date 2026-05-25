@@ -15,10 +15,11 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="./../assets/img/favicon/libro.png" type="image/x-icon">
-    <title>Categorías de libros</title>
+    <title>Iniciar Sesión</title>
 </head>
 
 <body>
+
     <header>
         <!-- Parte Superior -->
         <div class="header-top">
@@ -72,104 +73,62 @@
     </header>
 
     <main>
-        <div class="categories-container">
-            <h1>Explorar libros por categoría</h1>
-            <!-- Sección: Novelas clásicas -->
-            <section class="book-list" data-type="classic-novels">
 
-                <div class="section-header">
-                    <h2>Novelas clásicas</h2>
-                    <a href="" class="view-all">Ver todos →</a>
+        <div class="login-page-wrapper">
+
+            <section class="login-form">
+
+                <div class="login-form-container">
+
+                    <h2>INICIAR SESIÓN</h2>
+
+                    <div class="login-welcome-text">
+
+                        <p class="login-notice">
+                            Para guardar tus libros <strong>favoritos</strong> y usar el <strong>carrito de compras</strong>, necesitas iniciar sesión en
+                            tu cuenta.
+                        </p>
+
+                        <p>
+                            Ingresa a <strong>Páginas del Tiempo</strong> y continúa tu experiencia literaria.
+                        </p>
+
+                    </div>
+
+                    <form action="#" method="post" id="loginForm">
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" name="email" id="email" placeholder="Ej: johndoe@gmail.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" name="password" id="password" placeholder="Tu contraseña" required>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Ingresar</button>
+
+                        <div class="form-footer-actions">
+
+                            <p class="form-legal">
+                                ¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a>
+                            </p>
+
+                            <p class="form-redirect">
+                                ¿No tienes una cuenta? <a href="./register.html">Regístrate</a>
+                            </p>
+
+                        </div>
+
+                    </form>
+
                 </div>
-
-                <div class="books-grid"></div>
 
             </section>
 
-            <!-- Sección: Poesía -->
-            <section class="book-list" data-type="poetry">
-
-                <div class="section-header">
-                    <h2>Poesía</h2>
-                    <a href="" class="view-all">Ver todos →</a>
-                </div>
-
-                <div class="books-grid"></div>
-
-            </section>
-
-            <!-- Sección: Historia -->
-            <section class="book-list" data-type="history">
-
-                <div class="section-header">
-                    <h2>Historia</h2>
-                    <a href="" class="view-all">Ver todos →</a>
-                </div>
-
-                <div class="books-grid"></div>
-
-            </section>
-
-            <!-- Sección: Filosofía -->
-            <section class="book-list" data-type="philosophy">
-
-                <div class="section-header">
-                    <h2>Filosofía</h2>
-                    <a href="" class="view-all">Ver todos →</a>
-                </div>
-
-                <div class="books-grid"></div>
-
-            </section>
-
-            <!-- Sección: Ensayos -->
-            <section class="book-list" data-type="essays">
-
-                <div class="section-header">
-                    <h2>Ensayos</h2>
-                    <a href="" class="view-all">Ver todos →</a>
-                </div>
-
-                <div class="books-grid"></div>
-
-            </section>
-
-            <!-- Sección: Infantil -->
-            <section class="book-list" data-type="children">
-
-                <div class="section-header">
-                    <h2>Infantil</h2>
-                    <a href="" class="view-all">Ver todos →</a>
-                </div>
-
-                <div class="books-grid"></div>
-
-            </section>
-
-            <!-- Sección: Arte y fotografía -->
-            <section class="book-list" data-type="art-photography">
-
-                <div class="section-header">
-                    <h2>Arte y fotografía</h2>
-                    <a href="" class="view-all">Ver todos →</a>
-                </div>
-
-                <div class="books-grid"></div>
-
-            </section>
-
-            <!-- Sección: Ciencia -->
-            <section class="book-list" data-type="science">
-
-                <div class="section-header">
-                    <h2>Ciencia</h2>
-                    <a href="" class="view-all">Ver todos →</a>
-                </div>
-
-                <div class="books-grid"></div>
-
-            </section>
         </div>
+
     </main>
 
     <footer class="footer">
@@ -233,6 +192,7 @@
             <p>&copy; 2026 PÁGINAS DEL TIEMPO - Todos los derechos reservados.</p>
         </div>
     </footer>
+
 </body>
 
 </html>
