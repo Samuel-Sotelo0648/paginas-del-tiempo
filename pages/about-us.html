@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./../assets/css/style.css">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./../assets/img/favicon/typewriter-1" type="image/x-icon">
+    <link rel="shortcut icon" href="./../assets/img/favicon/libro.png" type="image/x-icon">
     <title>Sobre Nosotros</title>
 </head>
 
@@ -24,7 +24,7 @@
         <div class="header-top">
             <div class="logo">
                 <a href="./../index.html">
-                    <img src="./../assets/img/logo/typewriter-logo.svg" alt="Logo pag">
+                    <img src="./../assets/img/logo/libro.png" alt="Logo pag">
                     <div class="logo-content">
                         <h1>PÁGINAS DEL TIEMPO</h1>
                         <p>LIBROS QUE CUENTAN HISTORIAS</p>
@@ -32,34 +32,42 @@
                 </a>
             </div>
 
+            <!-- SEARCH (DESKTOP) -->
             <div class="search">
-                <input type="text" id="search" placeholder="🔍 Buscar libro, autor o ISBN">
-                <label for="search">Buscar</label>
+                <input type="search" id="search" placeholder="🔍 Buscar libro, autor o ISBN">
+                <button type="submit">Buscar</button>
             </div>
 
+            <!-- ACTIONS (DESKTOP) -->
             <div class="actions">
-                <a href="">
-                    <img src="./../assets/img/icons/actions/favorite_64.svg" alt="Ver favoritos">
-                </a>
+                <div class="icon-actions">
 
-                <a href="">
-                    <img src="./../assets/img/icons/actions/shopping_cart_64.svg" alt="Ver carrito">
-                </a>
+                    <a href="./login.html">
+                        <img src="./../assets/img/icons/actions/favorito.png" alt="Ver favoritos">
+                    </a>
 
-                <div class="user-dropdown">
-                    <button aria-label="Abrir menú de usuario" aria-expanded="false" aria-controls="user-menu">
-                        <img src="./../assets/img/icons/account_circle_64.svg" alt="Cuenta Usuario">
-                    </button>
+                    <a href="./login.html">
+                        <img src="./../assets/img/icons/actions/carrito-de-compras.png" alt="Ver carrito">
+                    </a>
 
-                    <ul id="user-menu" class="dropdown-menu">
-                        <li><a href="">Iniciar sesión</a></li>
-                        <li><a href="">Registrarse</a></li>
-                    </ul>
                 </div>
+
+                <div class="auth-actions">
+
+                    <a href="./login.html" class="login-btn">Iniciar sesión</a>
+                    <a href="./register.html" class="register-btn">Registrarse</a>
+
+                </div>
+
             </div>
+
+            <!-- HAMBURGUESA (SOLO MOBILE) -->
+            <button class="menu-toggle">
+                <img src="./../assets/img/icons/menu-toggle/menu.png" alt="Menu Hamburguesa">
+            </button>
         </div>
 
-        <!-- Navegacion -->
+        <!-- NAV DESKTOP -->
         <nav class="header-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="./../index.html">Inicio</a></li>
@@ -69,6 +77,51 @@
             </ul>
         </nav>
     </header>
+
+    <!-- ============================= -->
+    <!-- SIDEBAR MOBILE -->
+    <!-- ============================= -->
+
+    <aside class="mobile-sidebar">
+
+        <!-- BOTÓN CERRAR -->
+        <button class="close-menu">
+            <img src="" alt="Cerrar menú">
+        </button>
+
+        <!-- SEARCH MOBILE -->
+        <div class="mobile-search">
+            <input type="search" placeholder="Buscar libro, autor o ISBN">
+            <button type="submit">Buscar</button>
+        </div>
+
+        <!-- NAV MOBILE -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="./../index.html">Inicio</a></li>
+                <li><a href="./book-categories.html">Libros</a></li>
+                <li><a href="./about-us.html">Sobre Nosotros</a></li>
+                <li><a href="./contact.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+
+        <!-- ICONOS MOBILE -->
+        <div class="mobile-icons">
+            <a href="./login.html">
+                <img src="" alt="Ver favoritos"> Favoritos</a>
+            <a href="./login.html">
+                <img src="" alt="Ver carrito"> Carrito</a>
+        </div>
+
+        <!-- AUTH MOBILE -->
+        <div class="mobile-auth">
+            <a href="./login.html" class="login-btn">Iniciar sesión</a>
+            <a href="./register.html" class="register-btn">Registrarse</a>
+        </div>
+
+    </aside>
+
+    <div class="overlay"></div>
 
     <main class="about">
 
