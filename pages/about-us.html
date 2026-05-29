@@ -32,11 +32,13 @@
                 </a>
             </div>
 
+            <!-- SEARCH (DESKTOP) -->
             <div class="search">
                 <input type="search" id="search" placeholder="🔍 Buscar libro, autor o ISBN">
                 <button type="submit">Buscar</button>
             </div>
 
+            <!-- ACTIONS (DESKTOP) -->
             <div class="actions">
                 <div class="icon-actions">
 
@@ -58,9 +60,14 @@
                 </div>
 
             </div>
+
+            <!-- HAMBURGUESA (SOLO MOBILE) -->
+            <button class="menu-toggle">
+                <img src="" alt="Menu Hamburguesa">
+            </button>
         </div>
 
-        <!-- Navegacion -->
+        <!-- NAV DESKTOP -->
         <nav class="header-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="./../index.html">Inicio</a></li>
@@ -70,6 +77,51 @@
             </ul>
         </nav>
     </header>
+
+    <!-- ============================= -->
+    <!-- SIDEBAR MOBILE -->
+    <!-- ============================= -->
+
+    <aside class="mobile-sidebar">
+
+        <!-- BOTÓN CERRAR -->
+        <button class="close-menu">
+            <img src="" alt="Cerrar menú">
+        </button>
+
+        <!-- SEARCH MOBILE -->
+        <div class="mobile-search">
+            <input type="search" placeholder="Buscar libro, autor o ISBN">
+            <button type="submit">Buscar</button>
+        </div>
+
+        <!-- NAV MOBILE -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="./../index.html">Inicio</a></li>
+                <li><a href="./book-categories.html">Libros</a></li>
+                <li><a href="./about-us.html">Sobre Nosotros</a></li>
+                <li><a href="./contact.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+
+        <!-- ICONOS MOBILE -->
+        <div class="mobile-icons">
+            <a href="./login.html">
+                <img src="" alt="Ver favoritos"> Favoritos</a>
+            <a href="./login.html">
+                <img src="" alt="Ver carrito"> Carrito</a>
+        </div>
+
+        <!-- AUTH MOBILE -->
+        <div class="mobile-auth">
+            <a href="./login.html" class="login-btn">Iniciar sesión</a>
+            <a href="./register.html" class="register-btn">Registrarse</a>
+        </div>
+
+    </aside>
+
+    <div class="overlay"></div>
 
     <main class="about">
 
