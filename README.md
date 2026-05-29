@@ -43,12 +43,15 @@ El proyecto utiliza una estrategia basada en **GitFlow simplificado**:
 - **feat/***: Ramas para desarrollo de tareas específicas.  
 
 **Flujo de trabajo:**  
-`feat/* → dev → main`
+```bash
+feat/* → dev → main
+```
 
 ---
 
 ## 📂 Estructura del proyecto
 
+```bash
 Paginas del Tiempo Frontend/
 │
 ├── assets/
@@ -98,6 +101,7 @@ Paginas del Tiempo Frontend/
 ├── index.html
 │
 └── README.md
+```
 
 ---
 
