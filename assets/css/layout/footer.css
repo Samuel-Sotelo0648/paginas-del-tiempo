@@ -35,7 +35,7 @@ FOOTER LAYOUT
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 20px 0 1.875rem 0;
+        padding: 1.25rem 0 1.875rem 0;
     }
 
     /* TITULOS */
@@ -82,11 +82,11 @@ FOOTER LAYOUT
     }
 
     .social-icons img {
-        width: 40px;
+        width: 2.5rem;
     }
 
     .payment-icons img {
-        width: 50px;
+        width: 3.125rem;
     }
 
     /* FOOTER BOTTOM */
@@ -100,9 +100,6 @@ FOOTER LAYOUT
     }
 
 }
-
-
-
 
 
 @media (min-width: 1440px) {

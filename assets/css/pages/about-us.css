@@ -26,7 +26,7 @@ ABOUT US PAGE STYLES
     }
 
     .about-container {
-        margin: 50px 40px;
+        margin: 3.125rem 2.5rem;
     }
 
     /* 
@@ -70,7 +70,7 @@ ABOUT US PAGE STYLES
         flex-direction: column;
         border: 2px dotted var(--border-color);
         border-radius: 8px;
-        padding: 40px 0;
+        padding: 2.5rem 0;
         margin: 2.5rem 0;
     }
 
@@ -85,7 +85,7 @@ ABOUT US PAGE STYLES
         text-align: center;
         background-color: var(--bg-soft);
         background-image: url("https://transparenttextures.com/patterns/light-paper-fibers.png");
-        padding: 40px 35px;
+        padding: 2.5rem 2.1875rem;
         border-top-left-radius: 60px;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 40px;
@@ -93,7 +93,7 @@ ABOUT US PAGE STYLES
     }
 
     .vision {
-        margin-top: 45px;
+        margin-top: 2.8125rem;
     }
 
     /* 
@@ -112,7 +112,7 @@ ABOUT US PAGE STYLES
     .value-card,
     .why-item {
         width: 100%;
-        padding: 25px 1.875rem;
+        padding: 1.5625rem 1.875rem;
         border-bottom: 2px solid var(--border-color);
     }
 
@@ -149,7 +149,7 @@ ABOUT US PAGE STYLES
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 25px;
+        gap: 1.5625rem;
     }
 
     .btn-explore-collection {
