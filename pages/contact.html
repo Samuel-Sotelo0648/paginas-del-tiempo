@@ -166,7 +166,7 @@
                     <h2>Envíanos un mensaje directo</h2>
                     <p class="form-subtitle">Completa el formulario y te responderemos a la brevedad.</p>
 
-                    <form action="#" method="POST" id="contactForm">
+                    <form action="javascript:void(0);" onsubmit="if(typeof mostrarToastAuth==='function'){mostrarToastAuth('✉️ ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');}else{alert('Mensaje enviado');} this.reset(); return false;" id="contactForm">
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="name">Nombre completo (<span>*</span>)</label>
@@ -257,7 +257,8 @@
                     <li><a href="#">Preguntas frecuentes</a></li>
                     <li><a href="#">Envíos</a></li>
                     <li><a href="#">Devoluciones</a></li>
-                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="./contact.html">Contáctanos</a></li>
+                    <li><a href="./proveedores.html">Proveedores</a></li>
                 </ul>
             </div>
 
@@ -292,6 +293,12 @@
             <p>&copy; 2026 PÁGINAS DEL TIEMPO - Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Script de Datos Iniciales (105 clientes, compras, garantías) -->
+    <script src="./../assets/js/data-initial.js"></script>
+    <!-- Script de Catálogo y Buscador flotante -->
+    <script src="./../assets/js/catalog.js"></script>
+    <script src="./../assets/js/auth.js"></script>
 </body>
 
 </html>

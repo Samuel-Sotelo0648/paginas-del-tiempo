@@ -16,6 +16,11 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="./../assets/img/favicon/libro.png" type="image/x-icon">
     <title>Iniciar Sesión</title>
+
+    <!-- Scripts de Catálogo y Autenticación -->
+    <script src="./../assets/js/data-initial.js"></script>
+    <script src="./../assets/js/catalog.js"></script>
+    <script src="./../assets/js/auth.js"></script>
 </head>
 
 <body>
@@ -95,7 +100,7 @@
 
                     </div>
 
-                    <form action="#" method="post" id="loginForm">
+                    <form action="javascript:void(0);" onsubmit="event.preventDefault(); return (window.ejecutarLogin ? window.ejecutarLogin(event) : false);" id="loginForm">
 
                         <div class="form-group">
                             <label for="email">Correo electrónico:</label>
@@ -107,7 +112,7 @@
                             <input type="password" name="password" id="password" placeholder="Tu contraseña" required>
                         </div>
 
-                        <button type="submit" class="btn-submit">Ingresar</button>
+                        <button type="submit" class="btn-submit" id="btnLoginSubmit" onclick="event.preventDefault(); return (window.ejecutarLogin ? window.ejecutarLogin(event) : false);">Ingresar</button>
 
                         <div class="form-footer-actions">
 
@@ -157,7 +162,8 @@
                     <li><a href="#">Preguntas frecuentes</a></li>
                     <li><a href="#">Envíos</a></li>
                     <li><a href="#">Devoluciones</a></li>
-                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="./contact.html">Contáctanos</a></li>
+                    <li><a href="./proveedores.html">Proveedores</a></li>
                 </ul>
             </div>
 
@@ -192,7 +198,6 @@
             <p>&copy; 2026 PÁGINAS DEL TIEMPO - Todos los derechos reservados.</p>
         </div>
     </footer>
-
 </body>
 
 </html>

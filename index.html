@@ -78,8 +78,8 @@
                 <h2>Libros Vintage para mentes curiosas.</h2>
                 <p>Descubre historias que resisten al tiempo.</p>
                 <div class="hero-buttons">
-                    <a href="" class="btn-primary">Explorar colección</a>
-                    <a href="" class="btn-secondary">Explorar libros</a>
+                    <a href="#categories" class="btn-primary">Explorar colección</a>
+                    <a href="#new-releases" class="btn-secondary">Explorar libros</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -125,78 +125,84 @@
             <aside class="categories" id="categories">
                 <h2>Explora por categorías</h2>
 
-                <ul>
-                    <li><a href="">Novelas clásicas</a></li>
-                    <li><a href="">Poesía</a></li>
-                    <li><a href="">Historia</a></li>
-                    <li><a href="">Filosofía</a></li>
-                    <li><a href="">Ensayos</a></li>
-                    <li><a href="">Infantil</a></li>
-                    <li><a href="">Arte y fotografía</a></li>
-                    <li><a href="">Ciencia</a></li>
+                <ul id="categoriesList">
+                    <!-- Cargadas dinámicamente desde localStorage -->
                 </ul>
 
-                <a href="" class="categories-view-all">Ver todas las categorías →</a>
+                <a href="./pages/book-categories.html" class="categories-view-all">Ver todas las categorías →</a>
             </aside>
 
             <!-- Libros Destacados -->
-            <section class="book-section" data-type="featured">
+            <section class="book-section" id="featured-books" data-type="featured">
+
+                <!-- Banner dinámico para búsquedas o filtros de categoría -->
+                <div id="filtroBannerContenedor" style="display:none; margin-bottom: 1rem;"></div>
 
                 <div class="section-header">
                     <h2>Libros Destacados</h2>
-                    <a href="" class="view-all">Ver todos →</a>
+                    <a href="./pages/book-categories.html" class="view-all">Ver todos →</a>
                 </div>
 
-                <div class="books-grid"></div>
+                <div class="books-grid">
+                    <!-- Cargados dinámicamente desde localStorage -->
+                </div>
 
             </section>
         </section>
 
         <!-- Más Vendidos -->
-        <section class="book-list" data-type="best-sellers">
+        <section class="book-list" id="best-sellers" data-type="best-sellers">
 
             <div class="section-header">
                 <h2>Más vendidos</h2>
-                <a href="" class="view-all">Ver todos →</a>
+                <a href="./pages/book-categories.html" class="view-all">Ver todos →</a>
             </div>
 
-            <div class="books-grid"></div>
+            <div class="books-grid">
+                <!-- Cargados dinámicamente desde localStorage -->
+            </div>
 
         </section>
 
         <!-- Descuentos -->
-        <section class="book-list" data-type="discounts">
+        <section class="book-list" id="discounts" data-type="discounts">
 
             <div class="section-header">
-                <h2>Descuentos</h2>
-                <a href="" class="view-all">Ver todos →</a>
+                <h2>Descuentos especiales</h2>
+                <a href="./pages/book-categories.html" class="view-all">Ver todos →</a>
             </div>
 
-            <div class="books-grid"></div>
+            <div class="books-grid">
+                <!-- Cargados dinámicamente desde localStorage -->
+            </div>
 
         </section>
 
         <!-- Mejor Calificados -->
-        <section class="book-list" data-type="top-rated">
+        <section class="book-list" id="top-rated" data-type="top-rated">
 
             <div class="section-header">
                 <h2>Mejor calificados</h2>
-                <a href="" class="view-all">Ver todos →</a>
+                <a href="./pages/book-categories.html" class="view-all">Ver todos →</a>
             </div>
 
-            <div class="books-grid"></div>
+            <div class="books-grid">
+                <!-- Cargados dinámicamente desde localStorage -->
+            </div>
 
         </section>
 
         <!-- Nuevos Libros -->
-        <section class="book-list" data-type="new-releases">
+        <section class="book-list" id="new-releases" data-type="new-releases">
 
             <div class="section-header">
-                <h2>Nuevos libros</h2>
-                <a href="" class="view-all">Ver todos →</a>
+                <h2>Nuevos libros agregados</h2>
+                <a href="./pages/book-categories.html" class="view-all">Ver todos →</a>
             </div>
 
-            <div class="books-grid"></div>
+            <div class="books-grid">
+                <!-- Cargados dinámicamente desde localStorage -->
+            </div>
 
         </section>
 
@@ -255,7 +261,8 @@
                     <li><a href="#">Preguntas frecuentes</a></li>
                     <li><a href="#">Envíos</a></li>
                     <li><a href="#">Devoluciones</a></li>
-                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="./pages/contact.html">Contáctanos</a></li>
+                    <li><a href="./pages/proveedores.html">Proveedores</a></li>
                 </ul>
             </div>
 
@@ -290,6 +297,41 @@
             <p>&copy; 2026 PÁGINAS DEL TIEMPO - Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- MODAL DE DETALLE DE LIBRO -->
+    <div class="modal-overlay" id="modalDetalleLibro">
+        <div class="modal-card">
+            <h3>Detalle del Libro <button type="button" class="modal-close" onclick="cerrarModalDetalle()">&times;</button></h3>
+            <div class="book-modal-content">
+                <div class="book-modal-cover">
+                    <img id="modalLibroPortada" src="./assets/img/hero-features/libro.png" alt="Portada del libro">
+                </div>
+                <div class="book-modal-details">
+                    <h2 id="modalLibroTitulo" style="font-size: 1.4rem; color: var(--text-strong); margin-bottom: 0.2rem;">Título del libro</h2>
+                    <p class="author" id="modalLibroAutor">Autor</p>
+                    <div class="book-modal-meta">
+                        <div><span class="label">Categoría:</span> <span id="modalLibroCategoria">—</span></div>
+                        <div><span class="label">ISBN:</span> <span id="modalLibroIsbn">—</span></div>
+                        <div><span class="label">Encuadernación:</span> <span id="modalLibroEncuadernacion">—</span></div>
+                        <div><span class="label">Estado físico:</span> <span id="modalLibroEstado">—</span></div>
+                        <div><span class="label">Disponibilidad:</span> <span id="modalLibroStock">—</span></div>
+                    </div>
+                    <p class="book-modal-synopsis" id="modalLibroSinopsis">Sinopsis o descripción bibliográfica del ejemplar...</p>
+                    <div class="book-modal-footer">
+                        <div class="book-modal-price" id="modalLibroPrecio">$0</div>
+                        <button type="button" class="btn-modal-add" id="modalBtnAgregarCarrito">🛒 Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Datos Iniciales del Sistema (105 clientes, compras, garantías) -->
+    <script src="./assets/js/data-initial.js"></script>
+    <!-- Script del Catálogo Dinámico sincronizado con Administración -->
+    <script src="./assets/js/catalog.js"></script>
+    <!-- Script de Autenticación y Sesión de Usuario -->
+    <script src="./assets/js/auth.js"></script>
 </body>
 
 </html>

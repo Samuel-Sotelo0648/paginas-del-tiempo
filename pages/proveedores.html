@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿Quieres vender libros o colaborar con Páginas del Tiempo? Completa nuestro formulario de proveedores y nos pondremos en contacto contigo.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- CSS del proyecto -->
+    <link rel="stylesheet" href="./../assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../assets/img/favicon/libro.png" type="image/x-icon">
+    <title>Proveedores | Páginas del Tiempo</title>
+</head>
+
+<body>
+    <header>
+        <!-- Parte Superior -->
+        <div class="header-top">
+            <div class="logo">
+                <a href="./../index.html">
+                    <img src="./../assets/img/logo/libro.png" alt="Logo pag">
+                    <div class="logo-content">
+                        <h1>PÁGINAS DEL TIEMPO</h1>
+                        <p>LIBROS QUE CUENTAN HISTORIAS</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="search">
+                <input type="search" id="search" placeholder="🔍 Buscar libro, autor o ISBN">
+                <button type="submit">Buscar</button>
+            </div>
+
+            <div class="actions">
+                <div class="icon-actions">
+
+                    <a href="./login.html">
+                        <img src="./../assets/img/icons/actions/favorito.png" alt="Ver favoritos">
+                    </a>
+
+                    <a href="./login.html">
+                        <img src="./../assets/img/icons/actions/carrito-de-compras.png" alt="Ver carrito">
+                    </a>
+
+                </div>
+
+                <div class="auth-actions">
+
+                    <a href="./login.html" class="login-btn">Iniciar sesión</a>
+                    <a href="./register.html" class="register-btn">Registrarse</a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Navegacion -->
+        <nav class="header-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="./../index.html">Inicio</a></li>
+                <li><a href="./book-categories.html">Libros</a></li>
+                <li><a href="./about-us.html">Sobre Nosotros</a></li>
+                <li><a href="./contact.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="proveedores-hero">
+            <h2>Trabaja con nosotros</h2>
+            <p>
+                ¿Tienes libros que quisieras vender? ¿Eres proveedor de materiales o tienes una propuesta de colaboración?
+                Nos encantaría conocerte. Cuéntanos tu propuesta y te responderemos a la brevedad.
+            </p>
+        </section>
+
+        <!-- TIPOS DE SOLICITUD (visual seleccionable) -->
+        <div class="proveedores-tipos" id="tiposContainer">
+            <div class="tipo-card selected" data-tipo="vender-libros" onclick="seleccionarTipo(this)" role="button" tabindex="0">
+                <span class="tipo-icon">📚</span>
+                <div class="tipo-title">Vender libros</div>
+                <div class="tipo-desc">Tengo libros usados o nuevos para ofrecer a la librería</div>
+            </div>
+            <div class="tipo-card" data-tipo="proveedor-materiales" onclick="seleccionarTipo(this)" role="button" tabindex="0">
+                <span class="tipo-icon">📦</span>
+                <div class="tipo-title">Proveedor de materiales</div>
+                <div class="tipo-desc">Ofrezco insumos, empaques u otros materiales</div>
+            </div>
+            <div class="tipo-card" data-tipo="colaboracion" onclick="seleccionarTipo(this)" role="button" tabindex="0">
+                <span class="tipo-icon">🤝</span>
+                <div class="tipo-title">Colaboración / Alianza</div>
+                <div class="tipo-desc">Tengo una propuesta de alianza estratégica o evento</div>
+            </div>
+            <div class="tipo-card" data-tipo="otro" onclick="seleccionarTipo(this)" role="button" tabindex="0">
+                <span class="tipo-icon">✉️</span>
+                <div class="tipo-title">Otro</div>
+                <div class="tipo-desc">Tengo otra propuesta que no encaja en las anteriores</div>
+            </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="proveedores-container">
+            <div class="proveedores-form-wrapper" id="formWrapper">
+
+                <h3>Envíanos tu propuesta</h3>
+                <p class="form-subtitle">Completa el formulario y nuestro equipo evaluará tu solicitud. Los campos con <span class="required">*</span> son obligatorios.</p>
+
+                <!-- Formulario visible -->
+                <form id="proveedoresForm" novalidate>
+                    <input type="hidden" id="tipoSolicitud" value="vender-libros">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prov-nombre">Nombre completo <span class="required">*</span></label>
+                            <input type="text" id="prov-nombre" name="nombre" placeholder="Ej: María García" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prov-empresa">Empresa / Nombre comercial</label>
+                            <input type="text" id="prov-empresa" name="empresa" placeholder="Ej: Libros García (opcional)">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prov-email">Correo electrónico <span class="required">*</span></label>
+                            <input type="email" id="prov-email" name="email" placeholder="Ej: maria@correo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prov-telefono">Teléfono / WhatsApp <span class="required">*</span></label>
+                            <input type="tel" id="prov-telefono" name="telefono" placeholder="Ej: 3001234567" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prov-tipo-select">Tipo de solicitud <span class="required">*</span></label>
+                        <select id="prov-tipo-select" name="tipo" required>
+                            <option value="vender-libros">📚 Quiero vender libros a la librería</option>
+                            <option value="proveedor-materiales">📦 Soy proveedor de materiales o insumos</option>
+                            <option value="colaboracion">🤝 Propuesta de colaboración / alianza</option>
+                            <option value="otro">✉️ Otro tipo de solicitud</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prov-ciudad">Ciudad / Región</label>
+                        <input type="text" id="prov-ciudad" name="ciudad" placeholder="Ej: Medellín, Colombia">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prov-mensaje">Descripción de la propuesta <span class="required">*</span></label>
+                        <textarea id="prov-mensaje" name="mensaje" rows="6"
+                            placeholder="Cuéntanos con detalle qué ofreces: tipo de libros, géneros, cantidad aproximada, precios, condiciones de pago, etc." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit-proveedores" id="btnEnviarProv">
+                        <span>📩</span> Enviar solicitud
+                    </button>
+                </form>
+
+                <!-- Mensaje de éxito (oculto hasta envío) -->
+                <div class="success-message" id="successMessage">
+                    <span class="success-icon">✅</span>
+                    <h3>¡Solicitud enviada!</h3>
+                    <p>
+                        Hemos recibido tu propuesta. Nuestro equipo la revisará y se pondrá en contacto contigo
+                        en un plazo de <strong>2 a 5 días hábiles</strong> al correo o teléfono que proporcionaste.
+                    </p>
+                    <a href="./../index.html" class="btn-volver">← Volver al inicio</a>
+                </div>
+
+            </div>
+
+            <div class="proveedores-info">
+                <strong>¿Tienes dudas antes de enviar tu solicitud?</strong><br>
+                Escríbenos directamente a <a href="mailto:proveedores@paginasdeltiempo.com" style="color: var(--link); font-style: normal;">proveedores@paginasdeltiempo.com</a>
+                o consulta nuestra <a href="./contact.html" style="color: var(--link); font-style: normal;">página de contacto</a>.
+                Respondemos en 24-48 horas hábiles.
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <!-- Marca -->
+        <div class="footer-brand">
+            <h3>PÁGINAS DEL TIEMPO</h3>
+            <p>Libros que cuentan historias</p>
+        </div>
+
+        <!-- Contenido -->
+        <div class="footer-content">
+
+            <div class="footer-links">
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href="./../index.html">Inicio</a></li>
+                    <li><a href="./book-categories.html">Libros</a></li>
+                    <li><a href="./about-us.html">Sobre Nosotros</a></li>
+                    <li><a href="./../index.html#categories">Categorías</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-help">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="./contact.html">Contáctanos</a></li>
+                    <li><a href="./proveedores.html">Proveedores</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social-pay">
+
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank">
+                        <img src="./../assets/img/icons/social/instagram.svg" alt="Instagram" title="Instagram">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./../assets/img/icons/social/facebook.svg" alt="Facebook" title="Facebook">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./../assets/img/icons/social/gmail.svg" alt="Gmail" title="Gmail">
+                    </a>
+                </div>
+
+                <h4>Métodos de pago</h4>
+                <div class="payment-icons">
+                    <img src="./../assets/img/icons/payment/visa.svg" alt="Visa" title="Visa">
+                    <img src="./../assets/img/icons/payment/mastercard.svg" alt="Mastercard" title="Mastercard">
+                    <img src="./../assets/img/icons/payment/american-express.svg" alt="American Express"
+                        title="American Express">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PÁGINAS DEL TIEMPO - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* ================================================
+           SELECCIÓN DE TIPO (tarjetas visuales)
+        ================================================ */
+        function seleccionarTipo(card) {
+            document.querySelectorAll('.tipo-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            const tipo = card.dataset.tipo;
+            document.getElementById('tipoSolicitud').value = tipo;
+            // Sincronizar con el select del form
+            const select = document.getElementById('prov-tipo-select');
+            if (select) select.value = tipo;
+        }
+
+        // Sincronizar select → tarjeta visual
+        document.getElementById('prov-tipo-select').addEventListener('change', function () {
+            const val = this.value;
+            document.querySelectorAll('.tipo-card').forEach(c => {
+                c.classList.toggle('selected', c.dataset.tipo === val);
+            });
+            document.getElementById('tipoSolicitud').value = val;
+        });
+
+        // Teclado en tarjetas
+        document.querySelectorAll('.tipo-card').forEach(card => {
+            card.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    seleccionarTipo(this);
+                }
+            });
+        });
+
+        /* ================================================
+           ENVÍO DEL FORMULARIO → localStorage
+        ================================================ */
+        document.getElementById('proveedoresForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nombre   = document.getElementById('prov-nombre').value.trim();
+            const empresa  = document.getElementById('prov-empresa').value.trim();
+            const email    = document.getElementById('prov-email').value.trim();
+            const telefono = document.getElementById('prov-telefono').value.trim();
+            const tipo     = document.getElementById('prov-tipo-select').value;
+            const ciudad   = document.getElementById('prov-ciudad').value.trim();
+            const mensaje  = document.getElementById('prov-mensaje').value.trim();
+
+            if (!nombre || !email || !telefono || !mensaje) {
+                alert('Por favor completa todos los campos obligatorios.');
+                return;
+            }
+
+            // Construir solicitud
+            const solicitud = {
+                id: Date.now(),
+                fecha: new Date().toISOString(),
+                nombre,
+                empresa,
+                email,
+                telefono,
+                tipo,
+                ciudad,
+                mensaje,
+                estado: 'pendiente',    // pendiente | respondido
+                respuestaAdmin: ''
+            };
+
+            // Guardar en localStorage
+            const KEY = 'proveedorSolicitudes';
+            const existentes = JSON.parse(localStorage.getItem(KEY) || '[]');
+            existentes.unshift(solicitud);
+            localStorage.setItem(KEY, JSON.stringify(existentes));
+
+            // Registrar en Actividad Reciente del sistema
+            try {
+                const actKey = 'paginas_actividades_v1';
+                const acts = JSON.parse(localStorage.getItem(actKey) || '[]');
+                const ahoraAct = new Date();
+                const horaStr = `${ahoraAct.getHours()}:${String(ahoraAct.getMinutes()).padStart(2, '0')}`;
+                acts.unshift({
+                    icono: '🤝',
+                    texto: `Nueva propuesta de proveedor enviada por <strong>${nombre}</strong> (${empresa || 'Independiente'})`,
+                    tiempo: `Hoy, ${horaStr}`
+                });
+                if (acts.length > 15) acts.splice(15);
+                localStorage.setItem(actKey, JSON.stringify(acts));
+            } catch (err) {}
+
+            // Mostrar mensaje de éxito
+            this.style.display = 'none';
+            document.getElementById('successMessage').classList.add('visible');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <!-- Script de Datos Iniciales (105 clientes, compras, garantías) -->
+    <script src="./../assets/js/data-initial.js"></script>
+    <!-- Script de Catálogo y Buscador flotante -->
+    <script src="./../assets/js/catalog.js"></script>
+    <script src="./../assets/js/auth.js"></script>
+</body>
+
+</html>

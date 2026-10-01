@@ -21,6 +21,7 @@ COMPONENTS
 ========================= */
 
 @import url(./components/book-list.css);
+@import url(./components/book-card.css);
 
 /* =========================
 PAGES
@@ -31,3 +32,4 @@ PAGES
 @import url(./pages/about-us.css);
 @import url(./pages/contact.css);
 @import url(./pages/auth.css);
+@import url(./pages/proveedores.css);
