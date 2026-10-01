@@ -455,7 +455,7 @@ function actualizarHeaderAuth() {
    MODALES RÁPIDOS DE CARRITO Y FAVORITOS PARA USUARIOS
    ======================================================== */
 
-function mostrarModalCarrito(carrito) {
+/* function mostrarModalCarrito(carrito) {
   let modal = document.getElementById('modalCarritoPreview');
   if (!modal) {
     modal = document.createElement('div');
@@ -586,7 +586,7 @@ function finalizarCompraDemo() {
   } catch {}
 
   mostrarToastAuth('🎉 ¡Pedido realizado! El stock se ha actualizado. Gracias por tu compra.');
-}
+} */
 
 function mostrarModalFavoritos(favoritos) {
   const libros = typeof obtenerLibros === 'function' ? obtenerLibros() : [];
