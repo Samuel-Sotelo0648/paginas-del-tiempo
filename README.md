@@ -136,3 +136,21 @@ Las imágenes están separadas por secciones para mantener una estructura clara 
 ## 📌 Estado del proyecto
 
 🚧 **En desarrollo**
+
+---
+
+## 🤖 Asistente virtual con IA
+
+El sitio incluye un widget de chat en la página principal. El navegador envía los mensajes al servidor Express (`/api/chat`) y el servidor consulta la API de OpenAI. La clave se guarda únicamente en el archivo local `.env`; nunca la escribas en HTML ni JavaScript del navegador.
+
+### Cómo iniciar el proyecto con el asistente
+
+1. Instala Node.js LTS si aún no lo tienes.
+2. Abre una terminal en la carpeta raíz del proyecto (donde está `package.json`).
+3. Ejecuta `npm install`.
+4. Copia `.env.example` como `.env`.
+5. En `.env`, reemplaza `pega_tu_clave_aqui` por tu clave de API de OpenAI. No compartas ni subas ese archivo a Git.
+6. Ejecuta `npm start`.
+7. Abre `http://localhost:3000` en el navegador. No abras `index.html` directamente ni uses Live Server para probar la conexión con la IA.
+
+El uso de la API puede generar cargos según tu cuenta y consumo. El asistente puede recomendar libros y responder preguntas generales, pero **todavía no está conectado al inventario real ni a la base de datos de pedidos**; no puede confirmar existencias, precios, compras ni envíos reales.

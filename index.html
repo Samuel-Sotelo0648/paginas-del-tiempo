@@ -332,6 +332,16 @@
     <script src="./assets/js/catalog.js"></script>
     <!-- Script de Autenticación y Sesión de Usuario -->
     <script src="./assets/js/auth.js"></script>
+
+    <!-- Asistente virtual de Páginas del Tiempo -->
+    <section class="chatbot-panel" id="chatbotPanel" aria-label="Asistente virtual" aria-live="polite">
+        <header class="chatbot-header"><div><strong>Asistente de Páginas del Tiempo</strong><small>Recomendaciones y preguntas sobre libros</small></div><button class="chatbot-close" id="chatbotClose" type="button" aria-label="Cerrar chat">×</button></header>
+        <div class="chatbot-messages" id="chatbotMessages"><div class="chatbot-message bot">¡Hola! Soy el asistente virtual de Páginas del Tiempo. ¿Buscas un libro o necesitas ayuda?</div></div>
+        <form class="chatbot-form" id="chatbotForm"><input class="chatbot-input" id="chatbotInput" type="text" maxlength="1000" placeholder="Escribe tu pregunta…" autocomplete="off" required><button class="chatbot-send" id="chatbotSend" type="submit">Enviar</button></form>
+        <div class="chatbot-note">Las existencias y los pedidos deben verificarse con la tienda.</div>
+    </section>
+    <button class="chatbot-launcher" id="chatbotLauncher" type="button" aria-expanded="false">💬 Hablar con el asistente</button>
+    <script src="./assets/js/chatbot/chat-ui.js" defer></script>
 </body>
 
 </html>
