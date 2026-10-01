@@ -198,7 +198,8 @@
                     <li><a href="#">Preguntas frecuentes</a></li>
                     <li><a href="#">Envíos</a></li>
                     <li><a href="#">Devoluciones</a></li>
-                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="./contact.html">Contáctanos</a></li>
+                    <li><a href="./proveedores.html">Proveedores</a></li>
                 </ul>
             </div>
 
@@ -233,6 +234,41 @@
             <p>&copy; 2026 PÁGINAS DEL TIEMPO - Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- MODAL DE DETALLE DE LIBRO -->
+    <div class="modal-overlay" id="modalDetalleLibro">
+        <div class="modal-card">
+            <h3>Detalle del Libro <button type="button" class="modal-close" onclick="cerrarModalDetalle()">&times;</button></h3>
+            <div class="book-modal-content">
+                <div class="book-modal-cover">
+                    <img id="modalLibroPortada" src="./../assets/img/hero-features/libro.png" alt="Portada del libro">
+                </div>
+                <div class="book-modal-details">
+                    <h2 id="modalLibroTitulo" style="font-size: 1.4rem; color: var(--text-strong); margin-bottom: 0.2rem;">Título del libro</h2>
+                    <p class="author" id="modalLibroAutor">Autor</p>
+                    <div class="book-modal-meta">
+                        <div><span class="label">Categoría:</span> <span id="modalLibroCategoria">—</span></div>
+                        <div><span class="label">ISBN:</span> <span id="modalLibroIsbn">—</span></div>
+                        <div><span class="label">Encuadernación:</span> <span id="modalLibroEncuadernacion">—</span></div>
+                        <div><span class="label">Estado físico:</span> <span id="modalLibroEstado">—</span></div>
+                        <div><span class="label">Disponibilidad:</span> <span id="modalLibroStock">—</span></div>
+                    </div>
+                    <p class="book-modal-synopsis" id="modalLibroSinopsis">Sinopsis o descripción bibliográfica del ejemplar...</p>
+                    <div class="book-modal-footer">
+                        <div class="book-modal-price" id="modalLibroPrecio">$0</div>
+                        <button type="button" class="btn-modal-add" id="modalBtnAgregarCarrito">🛒 Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Datos Iniciales del Sistema (105 clientes, compras, garantías) -->
+    <script src="./../assets/js/data-initial.js"></script>
+    <!-- Script del Catálogo Dinámico sincronizado con Administración -->
+    <script src="./../assets/js/catalog.js"></script>
+    <!-- Script de Autenticación y Sesión de Usuario -->
+    <script src="./../assets/js/auth.js"></script>
 </body>
 
 </html>
