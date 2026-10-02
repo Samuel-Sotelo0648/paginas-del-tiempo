@@ -1,0 +1,250 @@
+/* ======================================================
+   ASISTENTE VIRTUAL IA - ESTILOS DE TEMA PÁGINAS DEL TIEMPO
+   ====================================================== */
+
+/* Botón flotante para abrir/cerrar el chat */
+.chatbot-launcher {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 20px;
+    background-color: var(--brown-dark, #3E2F23);
+    color: var(--color-surface-medium, #E0C8AA);
+    border: 2px solid var(--brown-light, #8B6B4A);
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(43, 31, 23, 0.35), 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease;
+}
+
+.chatbot-launcher:hover {
+    background-color: var(--btn-hover, #5A4332);
+    color: var(--color-white, #ffffff);
+    border-color: var(--color-surface-medium, #E0C8AA);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(43, 31, 23, 0.45);
+}
+
+.chatbot-launcher:active {
+    background-color: var(--btn-active, #2B1F17);
+    transform: translateY(0);
+}
+
+/* Ventana principal del chat */
+.chatbot-panel {
+    position: fixed;
+    right: 24px;
+    bottom: 86px;
+    z-index: 1000;
+    width: min(380px, calc(100vw - 32px));
+    height: 510px;
+    max-height: calc(100vh - 110px);
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-main, #F5EBDD);
+    border: 2px solid var(--brown-light, #8B6B4A);
+    border-radius: 16px;
+    box-shadow: 0 16px 38px rgba(43, 31, 23, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    font-family: inherit;
+    transition: all 0.25s ease-in-out;
+}
+
+.chatbot-panel.is-open {
+    display: flex;
+    animation: chatbotPanelFadeIn 0.22s ease-out;
+}
+
+@keyframes chatbotPanelFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Cabecera del chat estilo libro / encuadernación */
+.chatbot-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 16px;
+    background-color: var(--brown-dark, #3E2F23);
+    color: var(--color-surface-medium, #E0C8AA);
+    border-bottom: 2px solid var(--brown-light, #8B6B4A);
+}
+
+.chatbot-header strong {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-surface-medium, #E0C8AA);
+    letter-spacing: 0.5px;
+}
+
+.chatbot-header small {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.76rem;
+    color: var(--bg-secondary, #E8D8C3);
+    opacity: 0.9;
+}
+
+.chatbot-close {
+    border: 0;
+    background: transparent;
+    color: var(--color-surface-medium, #E0C8AA);
+    font-size: 26px;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chatbot-close:hover {
+    color: var(--color-white, #ffffff);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Contenedor de mensajes con textura de papel */
+.chatbot-messages {
+    padding: 16px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    background-color: var(--bg-main, #F5EBDD);
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+}
+
+/* Scrollbar personalizado estilo vintage */
+.chatbot-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbot-messages::-webkit-scrollbar-track {
+    background: var(--bg-secondary, #E8D8C3);
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+    background: var(--brown-light, #8B6B4A);
+    border-radius: 3px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--brown-medium, #6B4F36);
+}
+
+/* Burbujas de mensajes */
+.chatbot-message {
+    max-width: 88%;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    line-height: 1.48;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    box-shadow: 0 2px 5px rgba(62, 47, 35, 0.08);
+}
+
+/* Mensajes del Bot: estilo tarjeta de catálogo */
+.chatbot-message.bot {
+    align-self: flex-start;
+    background-color: var(--color-white, #ffffff);
+    border: 1px solid var(--color-surface-dark, #D4BFA3);
+    border-left: 3px solid var(--brown-medium, #6B4F36);
+    color: var(--text-main, #2B2B2B);
+    border-radius: 4px 14px 14px 14px;
+}
+
+/* Mensajes del Usuario: tono pergamino cálido */
+.chatbot-message.user {
+    align-self: flex-end;
+    background-color: var(--bg-card, #DCC8AA);
+    border: 1px solid var(--brown-light, #8B6B4A);
+    color: var(--text-strong, #1A1A1A);
+    border-radius: 14px 4px 14px 14px;
+    font-weight: 500;
+}
+
+/* Formulario de entrada */
+.chatbot-form {
+    display: flex;
+    gap: 8px;
+    padding: 10px 14px;
+    background-color: var(--bg-secondary, #E8D8C3);
+    border-top: 1px solid var(--color-surface-dark, #D4BFA3);
+}
+
+.chatbot-input {
+    min-width: 0;
+    flex: 1;
+    border: 1px solid var(--brown-light, #8B6B4A);
+    background-color: var(--color-white, #ffffff);
+    color: var(--text-main, #2B2B2B);
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chatbot-input:focus {
+    outline: none;
+    border-color: var(--brown-dark, #3E2F23);
+    box-shadow: 0 0 0 2px rgba(107, 79, 54, 0.2);
+}
+
+.chatbot-input::placeholder {
+    color: var(--text-muted, #5C5C5C);
+    opacity: 0.8;
+}
+
+.chatbot-send {
+    border: 1px solid var(--brown-light, #8B6B4A);
+    border-radius: 8px;
+    background-color: var(--brown-dark, #3E2F23);
+    color: var(--color-surface-medium, #E0C8AA);
+    padding: 0 16px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chatbot-send:hover:not(:disabled) {
+    background-color: var(--btn-hover, #5A4332);
+    color: var(--color-white, #ffffff);
+}
+
+.chatbot-send:disabled {
+    opacity: 0.55;
+    cursor: wait;
+}
+
+/* Nota informativa al pie */
+.chatbot-note {
+    font-size: 0.72rem;
+    color: var(--text-muted, #5C5C5C);
+    padding: 6px 14px 8px;
+    background-color: var(--bg-secondary, #E8D8C3);
+    border-top: 1px dashed var(--color-surface-dark, #D4BFA3);
+    text-align: center;
+}
